@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FarmacistaActivity"
+    android:background="@drawable/gradient_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/logo_android_bg"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true">
+
+
+
+            <!-- Pulsante di scansione -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/apri_scansioneBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scansiona ricetta"
+                android:textAllCaps="false"
+                android:background="@drawable/button_primary"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:padding="14dp"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Risultato della scansione -->
+            <TextView
+                android:id="@+id/rispostaFarmacistaTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:minHeight="200dp"
+                android:background="@drawable/textview_rounded"
+                android:textColor="#1f2b5b"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Risultato della scansione..."/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
