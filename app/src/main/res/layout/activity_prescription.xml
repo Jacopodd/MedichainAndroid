@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg"
+    android:gravity="center_horizontal"
+    tools:context=".PrescriptionActivity">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/logo_android_bg"
+        android:layout_marginBottom="15dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/white_rounded_bg"
+            android:padding="24dp">
+
+            <!-- Titolo -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dettagli Ricetta"
+                android:textSize="22sp"
+                android:textColor="#1f2b5b"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Data -->
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#1f2b5b"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tv_date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Lista dei farmaci -->
+            <TextView
+                android:id="@+id/tv_farmaci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farmaci:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#1f2b5b"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:id="@+id/container_farmaci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+                <!-- I farmaci verranno aggiunti dinamicamente qui -->
+            </LinearLayout>
+
+            <!-- Bottone per generare il QR Code -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/generaQrCodeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Genera QR Code"
+                android:textAllCaps="false"
+                android:background="@drawable/button_primary"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:padding="14dp"
+                android:layout_marginTop="24dp" />
+
+            <!-- Immagine QR Code (inizialmente invisibile) -->
+            <ImageView
+                android:id="@+id/qrCodeIV"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:visibility="gone"
+                android:layout_marginTop="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
